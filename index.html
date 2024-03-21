@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Guess</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="number_guess.js"></script>
+ 
+</head>
+
+<nav id="navbar">
+    <p id="nav-title">Number Guess<br></p>
+    <p id="nav-sub">Two players guess the number picked by the computer. The first player to guess correctly wins! </p>
+  </nav>
+  
+
+<main>
+    <section class="column-container">
+        <div class="firstC">
+          <section class="first-column">
+       
+          <!---Get Players' Names and Guesses-->
+          <section class="first-column">
+            <h2>Please enter your name and a number between 1 to 100</h2>
+              <h3>Player 1</h3>
+                <h4 id="playerOneInput">
+                  <label class="playerName" for="namePlayerOne">Name</label>
+                  <label class="playerGuess" for="guessPlayerOne">Guess</label><br>
+                  <input type="text" id="namePlayerOne" class="inputField" required placeholder="Player One Name">
+                  <input type="number" id="guessPlayerOne" class="inputField"  required placeholder="Player One Guess">
+                </h4>
+              <h3>Player 2</h3>
+                <h4 id="playerTwoInput">
+                  <label class="playerName" for="namePlayerTwo">Name</label>
+                  <label class="playerGuess" for="guessPlayerTwo">Guess</label><br>
+                  <input type="text" id="namePlayerTwo" class="inputField"  required placeholder="Player Two Name">
+                  <input type="number" id="guessPlayerTwo" class="inputField"  required placeholder="Player Two Guess">
+                </h4>
+                <h4 id="buttons">
+                  <button type="button" onclick="return validateNamesAndGuesses();" name="submit">Submit Guess</button>
+                  <button type="button" onclick='myResetButton()' value="Reset form">Reset Game</button>
+                </h4>
+          </section>
+          <br>
+          
+        <!---Display Guesses and Results-->
+        <section class="first-column">
+            <h2>Results</h2>
+            <div id="scoreBoxes">
+                <div id="guessResultPlayerOne">
+                 <b id="resultNamePlayerOne">Name</b><br>
+                    current guess<br>
+                <b id="playerOneRecordGuess" class="recordGuess">0</b><br>
+                <div id="resultOne"></div>
+            </div>
+            <div id="guessResultPlayerTwo">
+                <b id="resultNamePlayerTwo">Name</b><br>
+                current guess<br>
+                <b id="playerTwoRecordGuess" class="recordGuess">0</b><br>
+                <div id="resultTwo"></div>
+            </div>
+            </div>
+            </section>
+        </div>
+          
+      </section>
+</main>
+
+
+</html>
